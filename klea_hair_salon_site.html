@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Klea Hair Salon — Women's Hairdresser</title>
+  <meta name="description" content="Klea Hair Salon — Modern women's hair salon. Haircuts, coloring, balayage, blow-dry, hair care, and special day services." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Klea Hair Salon</div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+        <button class="btn" onclick="openBooking()">Book Now</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Klea Hair Salon — Enhance Your Hair</h1>
+        <p>Haircuts, coloring, balayage, special day styling, and personalized hair care packages.</p>
+        <button class="btn" onclick="openBooking()">Book Now</button>
+      </div>
+      <div class="hero-media"></div>
+    </section>
+
+    <section class="team-section" id="team">
+      <h2>Our Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <h3>Edis Pomaku</h3>
+          <p>Head Hairdresser & Color Specialist</p>
+          <span>Experience: 14 years</span>
+        </div>
+        <div class="team-member">
+          <h3>Elvan İmami</h3>
+          <p>Color Specialist & Hairdresser</p>
+          <span>Experience: 25 years</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section" id="services">
+      <h2>Price List</h2>
+      <div class="price-list">
+        <div class="price-item"><span>Premje</span><span>8€</span></div>
+        <div class="price-item"><span>Fenirim</span><span>5€</span></div>
+        <div class="price-item"><span>Fenirim Natyral</span><span>10€</span></div>
+        <div class="price-item"><span>Ngjyrosje</span><span>25-30€</span></div>
+        <div class="price-item"><span>Shatir</span><span>70-90€</span></div>
+        <div class="price-item"><span>Ombre</span><span>50-60€</span></div>
+        <div class="price-item"><span>Keratin Treatment</span><span>30-35€</span></div>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="images/edis1.jpg" alt="Hair style 1"></div>
+        <div class="gallery-item"><img src="images/edis2.jpg" alt="Hair style 2"></div>
+        <div class="gallery-item"><img src="images/edis3.jpg" alt="Hair style 3"></div>
+        <div class="gallery-item"><img src="images/edis4.jpg" alt="Hair style 3"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="location-info">
+      <p><strong>Phone:</strong> <a href="tel:+38349215334">+383-49-215-334</a></p>
+      <p><strong>Address:</strong> Rr: Fehmi Lladrovci</p>
+      <p><strong>Hours:</strong> Monday-Saturday 09:00 AM - 18:00 PM, Sunday: Closed</p>
+      <p><strong>Instagram:</strong> <a href="https://www.instagram.com/klea.hairsalon_edishairartist/" target="_blank">@klea.hairsalon_edishairartist</a></p>
+    </section>
+
+  </main>
+
+  <div class="modal" id="bookingModal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeBooking()">×</button>
+      <h2>Book an Appointment</h2>
+      <form id="bookingForm" onsubmit="submitBooking(event)">
+        <input type="text" id="bName" placeholder="Full Name" required>
+        <input type="tel" id="bPhone" placeholder="Phone Number" required>
+        <input type="email" id="bEmail" placeholder="Email (optional)">
+        <select id="bService" required>
+          <option value="">Select Service</option>
+          <option>Premje - 8€</option>
+          <option>Fenirim - 5€</option>
+          <option>Fenirim Natyral - 10€</option>
+          <option>Ngjyrosje - 25-30€</option>
+          <option>Shatir - 70-90€</option>
+          <option>Ombre - 50-60€</option>
+          <option>Keratin Treatment - 30-35€</option>
+        </select>
+        <input type="date" id="bDate" required>
+        <textarea id="bNote" rows="3" placeholder="Additional Notes (optional)"></textarea>
+        <button class="btn" type="submit">Complete Booking</button>
+      </form>
+      <p id="bookingMsg"></p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Klea Hair Salon. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
